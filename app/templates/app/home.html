@@ -1,0 +1,20 @@
+{%extends 'app/base.html'%}
+{%block document%}home{%endblock%}
+{%block content%}
+<div class="col-sm-10">
+    <h3 class="text-white my-5">Home Page</h3>
+    <h3 class="text-black my-5 alert alert-success">All Posts</h3>
+    {%for dt in data%}
+    <div class="jumbotron jumbotron-fluid ">
+        <div class="container jumbo-color">
+          
+          <h1 class="display-4">{{dt.title}}</h1>
+          <p class="lead">{{dt.desc}}</p>
+          <p style="color:yellow">post by: {{dt.username}}</p>
+          
+          
+        </div>
+      </div>
+      {%endfor%}
+</div>
+{%endblock%}

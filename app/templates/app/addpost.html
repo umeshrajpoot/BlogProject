@@ -1,0 +1,21 @@
+{%extends 'app/base.html'%}
+{%load static%}
+
+{%block content%}
+<div class="col-sm-10">
+    <h3 class="text-white my-5">Deshboard/ Add post</h3>
+    {% for msg1 in messages%}
+            <div {% if msg1.tags %} class="alert alert-{{msg1.tags}} alert dismissible fade show my-3"{% endif %}>
+            <strong>{{msg1}}</strong>
+               
+            </div>
+        {%endfor %}
+    
+    <form action="" method="post" novalidate>
+        {%csrf_token%}
+        {{form.as_p}}
+        <input type="submit" value="add" class="btn btn-success">
+        <a href="{%url 'deshboard'%}" class="btn btn-danger">cancel</a>
+    </form>
+</div>
+{%endblock%}
