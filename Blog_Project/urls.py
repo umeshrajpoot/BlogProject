@@ -32,6 +32,7 @@ urlpatterns = [
     path('addpost/',views.add_post,name='addpost'),
     path('update/<int:id>',views.update_post,name='update'),
     path('delete/<int:id>/',views.delete_post,name='delete'),
+    path("index/",views.Index),
 
     #path('delete/', views.BlogPostDeleteView.as_view(), name='delete'),
 

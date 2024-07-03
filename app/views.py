@@ -145,3 +145,6 @@ def delete_post(request,id):
 #     template_name = 'deshboard.html'
 #     success_url = '/login/'
 #     permission_required = 'app.delete_blog_post'
+
+def Index(request):
+    return render(request ,"app/index.html")
